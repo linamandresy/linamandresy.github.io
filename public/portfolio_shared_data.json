@@ -1,17 +1,22 @@
 {
     "basic_info": {
-      "name": "Davina Griss",
-      "titles": [ "Front-end Developer", "Senior Data Engineer", "Dev Team lead", "Mobile App Developer" ],
+      "name": "Lina Mandresy Rabenandrasana",
+      "titles": [ "Software Development Engineer",  "Fullstack Web Developer" ],
       "social": [
         {
           "name": "github",
-          "url": "https://github.com",
+          "url": "https://github.com/linamandresy",
           "class": "fab fa-github"
         },
         {
           "name": "instagram",
-          "url": "https://www.instagram.com",
-          "class": "fab fa-instagram"
+          "url": "https://www.instagram.com/lina_mandresy/",
+          "class": "fab fa-linkedin-in"
+        },
+        {
+          "name": "gitlab",
+          "url": "https://gitlab.com/mandresyrab",
+          "class": "fab fa-gitlab"
         }
       ],
       "image": "myProfile.jpg"
