@@ -1,12 +1,12 @@
 {
     "basic_info": {
-      "description_header": "Cześć",
-      "description": "👋 Jestem Davina Griss. Fikcyjna osoba na potrzeby demonstracji. Pracuję z najnowszymi frameworkami front-end takimi jak Angular, React i Vue. To co teraz widzisz to szablon portfolio od Dorota1997. Jeżeli podoba Ci się ten szablon portfolio nie zapomnij o ⭐, żeby było bardziej rozpoznawalne dla innych użytkowników. Dzięki 💜",
+      "description_header": "👋Salut,  Je suis Lina Mandresy Rabenandrasana",
+      "description": "Ingénieur Logiciel avec 5 ans d'expérience dans le développement d'applications de haute qualité. Titulaire d’un Master d’une grande école technologique en France 🇫🇷, je suis désormais basé à Toronto 🍁 pour apporter mon expertise au marché technologique canadien. Je suis bilingue en français et en anglais, et passionné par un code propre, efficace et utile. Merci de votre visite 🚀💻",
       "section_name": {
-        "about": "O mnie",
-        "projects": "Projekty",
-        "skills": "Umiejętności",
-        "experience": "Doświadczenie"
+        "about": "A Propos",
+        "projects": "Projets",
+        "skills": "Compétences",
+        "experience": "Experience"
       }
     },
     "projects": [

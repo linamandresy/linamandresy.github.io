@@ -1,7 +1,7 @@
 {
     "basic_info": {
-      "description_header": "Hi",
-      "description": "👋 I'm Davina Griss. Fictional person for preview purposes :) I'm working with newest front-end frameworks like Angular, React and Vue. What you are seeing now is portfolio template from Dorota1997. If you like this portfolio template, make sure to ⭐ the repository to make it more recognizable for other users. Thank you 💜",
+      "description_header": "👋 Hi, I am Lina Mandresy Rabenandrasana",
+      "description": "a Software Engineer with 5 years of experience in building high-quality applications. I hold a Master's degree from a top tech university in France 🇫🇷, and I'm now based in Toronto 🍁 to bring my expertise to the Canadian tech market. I'm bilingual in French and English, and passionate about clean, efficient, and impactful code. Thanks for visiting 🚀💻",
       "section_name": {
         "about": "About me",
         "projects": "Projects",
@@ -11,38 +11,38 @@
     },
     "projects": [
       {
-        "title": "Animal Shelter",
-        "startDate": "2020",
-        "description": "The most expanded application I had opportunity to work with. I've learned many technologies and my code was reviewed by awesome curator. Application handles all adoption processess and allows to store all evidence on adopting animals from animal shelter.",
+        "title": "A.MA.DIA (Association Malgache contre le Diabète) – Hospital Information System",
+        "startDate": "2024",
+        "description": "an information system developed to support the daily operations of a hospital specializing in diabetes care in Madagascar. The system was designed to digitize and streamline the hospital’s workflow, covering key areas such as patient registration, consultation tracking, appointment scheduling, medical record management, and laboratory results. By centralizing data and automating administrative tasks, the platform improved the efficiency of hospital services, reduced paperwork, and facilitated better coordination between departments. The project aimed to modernize healthcare management and enhance the quality of care provided to diabetic patients.",
         "images": [
-          "images/portfolio/animal-shelter/p1.jpg",
-          "images/portfolio/animal-shelter/p2.jpg"
+          "images/portfolio/amadia/logo.png"
         ],
         "url": "",
         "technologies": [
           {
+            "class": "devicon-java-plain",
+            "name": "Java"
+          },
+          {
+            "class": "devicon-postgresql-plain",
+            "name": "PostgreSQL"
+          },
+          {
             "class": "devicon-angularjs-plain",
             "name": "Angular"
-          },
-          {
-            "class": "devicon-typescript-plain",
-            "name": "TypeScript"
-          },
-          {
-            "class": "devicon-csharp-plain",
-            "name": "C#"
           }
         ]
       },
       {
-        "title": "Photography",
-        "startDate": "2018",
-        "description": "Personal project for study subject. I was responsible for testing photography application that optimizes images with popular algorithms used by graphic editors like Pixlr or Adobe Photoshop. I've earned A grade :)",
+        "title": "BICI(Bureau International de Consultance Informatique) – Corporate Website for IT Consulting",
+        "startDate": "2024",
+        "description": "The BICI website was developed to enhance the company’s online presence and provide a centralized platform for showcasing its services, expertise, and client portfolio. Designed with both corporate communication and client engagement in mind, the site features a modern, responsive interface with dedicated sections for company information, project case studies, service offerings, and contact forms. It also integrates a secure admin panel for content management, enabling BICI to easily update and maintain the website. The goal was to reflect the company’s identity and professionalism while improving visibility and accessibility for potential clients and partners.",
         "images": [
-          "images/portfolio/photography/p1.jpg",
-          "images/portfolio/photography/p2.jpg"
+          "images/portfolio/bici/logo.jpeg",
+          "images/portfolio/bici/bici-1.png",
+          "images/portfolio/bici/bici-2.png"
         ],
-        "url": "https://github.com",
+        "url": "https://bici.mg/a-propos.html",
         "technologies": [
           {
             "class": "devicon-react-original",
@@ -81,37 +81,120 @@
     ],
     "experience": [
       {
-        "company": "DefOpenSource",
-        "title": "Front-End Developer",
-        "years": "10.2019 - present",
+        "company": "BICI",
+        "title": "Lead Software Engineer",
+        "years": "03.2022 - 12.2024",
         "mainTech": [
-          "Angular 8/9/10"
+          "Java",
+          "Go",
+          "Oracle",
+          "C#",
+          "Python"
         ],
         "technologies": [
-          "REST API",
-          "RxJS",
-          "JavaScript",
-          "Bootstrap",
-          "MDBootstrap",
-          "EF Core",
+          "MySQL",
+          "React",
+          "ASP.NET",
+          "Spring",
+          "Spring Boot",
           ".NET Core",
-          "SignalR",
-          "Angular Material"
+          ".NET Framework",
+          "Docker",
+          "Kubernetes",
+          "Oracle",
+          "PostgreSQL",
+          "MySQL",
+          "Django",
+          "Node.js",
+          "MongoDB",
+          "HTML/CSS",
+          "JS/TS",
+          "Bootstrap",
+          "C/C++",
+          "Google Cloud Platform"
         ]
       },
       {
-        "company": "Serros Solutions",
-        "title": "Intern",
-        "years": "01.2018 - 09.2019",
+        "company": "RAPP Indian Ocean(Contract with BICI)",
+        "title": "Software Development Engineer",
+        "years": "01.2022 - 12.2023",
         "mainTech": [
-          "Angular 7/8"
+          "Laravel",
+          "VueJS"
         ],
         "technologies": [
-          "RxJS",
-          "Django",
           "PHP",
-          "JavaScript",
-          "DHTMLX Gantt"
+          "MySQL",
+          "HTML/CSS",
+          "Laravel Nova",
+          "Cloudflare",
+          "ElasticSearch"
+        ]
+      },
+      {
+        "company": "BICI",
+        "title": "Software Development Engineer",
+        "years": "12.2021 - 03.2022",
+        "mainTech": [
+          "Java",
+          "Go",
+          "Oracle",
+          "C#",
+          "Python"
+        ],
+        "technologies": [
+          "MySQL",
+          "Angular",
+          "ASP.NET",
+          "Spring",
+          "Spring Boot",
+          ".NET Core",
+          ".NET Framework",
+          "Docker",
+          "Kubernetes",
+          "Oracle",
+          "PostgreSQL",
+          "MySQL",
+          "Django",
+          "Node.js",
+          "MongoDB",
+          "HTML/CSS",
+          "JS/TS",
+          "Bootstrap",
+          "C/C++"
+        ]
+      },
+      {
+        "company": "PULSE",
+        "title": "Research and Development Engineer(Internship)",
+        "years": "07.2021 - 10.2021",
+        "mainTech": [
+          "Typescript",
+          "NodeJS",
+          "Google Dialogflow"
+        ],
+        "technologies": [
+          "Angular",
+          "MongoDB",
+          "HTML/CSS",
+          "Zammad",
+          "Docker",
+          "Active Directory",
+          "Microsoft Teams API"
+        ]
+      },
+      {
+        "company": "Farmshop Antsirabe",
+        "title": "Software Developer (Part-time)",
+        "years": "10.2019 - 06.2021",
+        "mainTech": [
+          "C/C++",
+          "Qt Design"
+        ],
+        "technologies": [
+          "SQLite",
+          "Go",
+          "PostgreSQL"
         ]
       }
     ]

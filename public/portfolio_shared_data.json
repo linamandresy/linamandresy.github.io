@@ -1,7 +1,7 @@
 {
     "basic_info": {
       "name": "Lina Mandresy Rabenandrasana",
-      "titles": [ "Software Development Engineer",  "Fullstack Web Developer" ],
+      "titles": [ "Software Development Engineer",  "Fullstack Developer" ],
       "social": [
         {
           "name": "github",
@@ -23,6 +23,101 @@
     },
     "skills": {
       "icons": [
+        {
+          "name": "C/C++",
+          "class": "devicon-c-plain",
+          "level": "60"
+        },
+        {
+          "name": "Go/Golang",
+          "class": "devicon-go-plain",
+          "level": "60"
+        },
+        {
+          "name": "C#",
+          "class": "devicon-csharp-plain",
+          "level": "65"
+        },
+        {
+          "name": "MySql",
+          "class": "devicon-mysql-plain",
+          "level": "60"
+        },
+        {
+          "name": "React",
+          "class": "devicon-react-plain",
+          "level": "60"
+        },
+        {
+          "name": "Node.js",
+          "class": "devicon-nodejs-plain",
+          "level": "60"
+        },
+        {
+          "name": "MongoDB",
+          "class": "devicon-mongodb-plain",
+          "level": "60"
+        },
+        {
+          "name": "PostgreSQL",
+          "class": "devicon-postgresql-plain",
+          "level": "60"
+        },
+        {
+          "name": ".NET Core",
+          "class": "devicon-dot-net-plain",
+          "level": "60"
+        },
+        {
+          "name": ".NET Framework",
+          "class": "devicon-dot-net-plain-wordmark",
+          "level": "60"
+        },
+        {
+          "name": "Java",
+          "class": "devicon-java-plain",
+          "level": "60"
+        },
+        {
+          "name": "PHP",
+          "class": "devicon-php-plain",
+          "level": "60"
+        },
+        {
+          "name": "Django",
+          "class": "devicon-django-plain",
+          "level": "60"
+        },
+        {
+          "name": "Swift",
+          "class": "devicon-swift-plain",
+          "level": "60"
+        },
+        {
+          "name": "GraphQL",
+          "class": "devicon-graphql-plain",
+          "level": "60"
+        },
+        {
+          "name": "Docker",
+          "class": "devicon-docker-plain",
+          "level": "60"
+        },
+        {
+          "name": "Kubernetes",
+          "class": "devicon-kubernetes-plain",
+          "level": "60"
+        },
+        {
+          "name": "Git",
+          "class": "devicon-git-plain",
+          "level": "60"
+        },
+        {
+          "name": "Linux",
+          "class": "devicon-linux-plain",
+          "level": "60"
+        },
         {
           "name": "HTML 5",
           "class": "devicon-html5-plain",
@@ -57,16 +152,6 @@
           "name": "Bootstrap",
           "class": "devicon-bootstrap-plain",
           "level": "85"
-        },
-        {
-          "name": "C#",
-          "class": "devicon-csharp-plain",
-          "level": "65"
-        },
-        {
-          "name": "MySql",
-          "class": "devicon-mysql-plain",
-          "level": "60"
         }
       ]
     }
