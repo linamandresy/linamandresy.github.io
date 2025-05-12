@@ -38,9 +38,9 @@
         "startDate": "2024",
         "description": "The BICI website was developed to enhance the company’s online presence and provide a centralized platform for showcasing its services, expertise, and client portfolio. Designed with both corporate communication and client engagement in mind, the site features a modern, responsive interface with dedicated sections for company information, project case studies, service offerings, and contact forms. It also integrates a secure admin panel for content management, enabling BICI to easily update and maintain the website. The goal was to reflect the company’s identity and professionalism while improving visibility and accessibility for potential clients and partners.",
         "images": [
-          "images/portfolio/bici/logo.jpeg",
           "images/portfolio/bici/bici-1.png",
-          "images/portfolio/bici/bici-2.png"
+          "images/portfolio/bici/bici-2.png",
+          "images/portfolio/bici/logo.jpeg"
         ],
         "url": "https://bici.mg/a-propos.html",
         "technologies": [
@@ -51,30 +51,184 @@
           {
             "class": "devicon-javascript-plain",
             "name": "JavaScript"
+          },
+          {
+            "class": "devicon-html5-plain",
+            "name": "HTML"
+          },
+          {
+            "class": "devicon-css3-plain",
+            "name": "CSS"
+          },
+          {
+            "class": "devicon-bootstrap-plain",
+            "name": "Bootstrap"
+          },
+          {
+            "class": "devicon-nextjs-plain",
+            "name": "Next.js"
           }
         ]
       },
       {
-        "title": "3D Object Viewer",
-        "startDate": "2015",
-        "description": "One of the first apps I was working on my internship. I had to develop front-end implementation for app that shows 3D models of known buildings. This was also my first project in Angular framework. I've learned a lot!",
+        "title": "Ketrika.ai – Intelligent Shopping Assistant and Recommendation Engine for Ketrika.com",
+        "startDate": "2023",
+        "description": "Ketrika.ai is a conversational assistant and intelligent recommendation system developed for Ketrika.com to enhance user engagement and improve the shopping experience. Integrated with Facebook Messenger, the chatbot helps users discover products, ask questions, and receive personalized assistance in real time, using natural language processing to understand customer intent. In parallel, a custom recommendation engine was built to analyze user behavior, preferences, and product data to generate relevant product suggestions on the website. Together, these components aimed to increase customer satisfaction, boost conversion rates, and automate support for a growing e-commerce platform focused on local Malagasy products.",
         "images": [
-          "images/portfolio/adventure/p1.jpg",
-          "images/portfolio/adventure/p2.jpg"
+          "images/portfolio/ketrika/ketrika-ai.png"
         ],
-        "url": "https://github.com",
+        "url": "",
         "technologies": [
+          {
+            "class": "devicon-python-plain",
+            "name": "Python"
+          },
+          {
+            "class": "devicon-postgresql-plain",
+            "name": "PostgreSQL"
+          },
           {
             "class": "devicon-angularjs-plain",
             "name": "Angular"
           },
           {
-            "class": "devicon-typescript-plain",
-            "name": "TypeScript"
+            "class": "devicon-django-plain",
+            "name": "Django"
           },
+          {
+            "class": "devicon-mongodb-plain",
+            "name": "MongoDB"
+          },
+          {
+            "class": "devicon-go-plain",
+            "name": "Go"
+          },
+          {
+            "class": "devicon-googlecloud-plain",
+            "name": "GCP"
+          },
+          {
+            "class":"devicon-tensorflow-original",
+            "name":"TensorFlow"
+          }
+        ]
+      },
+      {
+        "title": "Gallois 2.0 – Integrated Stock, Accounting, and HR Management System",
+        "startDate": "2022",
+        "description": "Gallois 2.0 is an integrated information system developed for a mining company in Madagascar to digitize and streamline key operational processes. The platform includes three core modules: stock management, accounting, and human resources. It enables real-time inventory tracking, automated financial reporting, payroll processing, employee records management, and role-based access control. Tailored to the specific needs of the mining sector, the system improves operational efficiency, ensures compliance with local accounting standards, and supports better workforce and resource planning. Gallois 2.0 significantly reduced manual tasks and helped the client gain full visibility into their financial and logistical operations.",
+        "images": [
+          "images/portfolio/gallois/logo.jpeg"
+        ],
+        "url": "",
+        "technologies": [
           {
             "class": "devicon-csharp-plain",
             "name": "C#"
+          },
+          {
+            "class": "devicon-microsoftsqlserver-plain",
+            "name": "SQL Server"
+          },
+          {
+            "class": "devicon-dot-net-plain-wordmark",
+            "name": "ASP.NET"
+          },
+          {
+            "class": "devicon-html5-plain",
+            "name": "HTML"
+          },
+          {
+            "class": "devicon-bootstrap-plain",
+            "name": "Bootstrap"
+          },
+          {
+            "class": "devicon-css3-plain",
+            "name": "CSS"
+          }
+        ]
+      },
+      {
+        "title": "Ketrika.com – E-Commerce Platform for Malagasy Handcrafted and Local Products",
+        "startDate": "2022",
+        "description": "Ketrika.com is a custom-built e-commerce platform developed to promote and sell handcrafted and locally produced Malagasy goods. The website allows users to browse product categories, manage shopping carts, place orders, and track deliveries through an intuitive and mobile-friendly interface. The platform includes an admin dashboard for managing products, inventory, customer data, and order processing. It was designed to support local artisans and businesses by providing them with a reliable digital marketplace, while offering customers a secure and user-friendly shopping experience. The system also features a product recommendation engine to personalize the user journey and boost sales.",
+        "images": [
+          "images/portfolio/ketrika/ketrika-1.png",
+          "images/portfolio/ketrika/ketrika-2.png"
+        ],
+        "url": "https://www.ketrika.com/home.jsp?but=pari/index",
+        "technologies": [
+          {
+            "class": "devicon-java-plain",
+            "name": "Java"
+          },
+          {
+            "class": "devicon-postgresql-plain",
+            "name": "PostgreSQL"
+          },
+          {
+            "class": "devicon-angularjs-plain",
+            "name": "Angular"
+          },
+          {
+            "class": "devicon-html5-plain",
+            "name": "HTML"
+          },
+          {
+            "class": "devicon-bootstrap-plain",
+            "name": "Bootstrap"
+          },
+          {
+            "class": "devicon-css3-plain",
+            "name": "CSS"
+          },
+          {
+            "class": "devicon-spring-plain",
+            "name": "Spring"
+          }
+        ]
+      },
+      {
+        "title": "VidyVarotra.mg – Online Ad Management Platform for a Newspaper Company",
+        "startDate": "2021",
+        "description": "VidyVarotra.mg is a web-based ad management system developed for a Malagasy newspaper company to digitize and streamline the process of creating, submitting, and managing classified and commercial advertisements. The platform allows individual and business users to submit ad requests, choose publication options (print or online), preview layouts, and track the status of their submissions. It includes an internal admin interface for staff to review, approve, schedule, and archive advertisements, ensuring efficient workflow and reducing manual tasks. By modernizing the ad submission process, the platform improved turnaround time, enhanced customer experience, and increased operational transparency.",
+        "images": [
+          "images/portfolio/vvsite/vv-1.png",
+          "images/portfolio/vvsite/vv-2.png"
+        ],
+        "url": "https://www.vidyvarotra.mg/index.jsp",
+        "technologies": [
+          {
+            "class": "devicon-java-plain",
+            "name": "Java"
+          },
+          {
+            "class": "devicon-postgresql-plain",
+            "name": "PostgreSQL"
+          },
+          {
+            "class": "devicon-angularjs-plain",
+            "name": "Angular"
+          },
+          {
+            "class": "devicon-html5-plain",
+            "name": "HTML"
+          },
+          {
+            "class": "devicon-bootstrap-plain",
+            "name": "Bootstrap"
+          },
+          {
+            "class": "devicon-css3-plain",
+            "name": "CSS"
+          },
+          {
+            "class": "devicon-spring-plain",
+            "name": "Spring"
+          },
+          {
+            "class":"devicon-go-plain",
+            "name":"Go"
           }
         ]
       }
