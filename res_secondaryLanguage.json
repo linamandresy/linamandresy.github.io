@@ -1,0 +1,355 @@
+{
+    "basic_info": {
+      "description_header": "👋Salut,  Je suis Lina Mandresy Rabenandrasana",
+      "description": "Ingénieur Logiciel avec 5 ans d'expérience dans le développement d'applications de haute qualité. Titulaire d’un Master d’une grande école technologique en France 🇫🇷, je suis désormais basé à Toronto 🍁 pour apporter mon expertise au marché technologique canadien. Je suis bilingue en français et en anglais, et passionné par un code propre, efficace et utile. Merci de votre visite 🚀💻",
+      "section_name": {
+        "about": "A Propos",
+        "projects": "Projets",
+        "skills": "Compétences",
+        "experience": "Experience"
+      }
+    },
+    "projects": [
+      {
+        "title": "A.MA.DIA (Association Malgache contre le Diabète) – Système d'information hospitalier",
+        "startDate": "2024",
+        "description": "Un système d'information développé pour soutenir les opérations quotidiennes d'un hôpital spécialisé dans le traitement du diabète à Madagascar. Le système a été conçu pour numériser et rationaliser le flux de travail de l’établissement hospitalier, en couvrant des domaines clés tels que l’enregistrement des patients, le suivi des consultations, la planification des rendez-vous, la gestion des dossiers médicaux et les résultats de laboratoire. En centralisant les données et en automatisant les tâches administratives, la plateforme a permis d’améliorer l’efficacité des services hospitaliers, de réduire la paperasse et de faciliter une meilleure coordination entre les départements. Le projet visait à moderniser la gestion des soins de santé et à améliorer la qualité des soins offerts aux patients diabétiques.",
+        "images": [
+          "images/portfolio/amadia/logo.png"
+        ],
+        "url": "",
+        "technologies": [
+          {
+            "class": "devicon-java-plain",
+            "name": "Java"
+          },
+          {
+            "class": "devicon-postgresql-plain",
+            "name": "PostgreSQL"
+          },
+          {
+            "class": "devicon-angularjs-plain",
+            "name": "Angular"
+          }
+        ]
+      },
+      {
+        "title": "BICI (Bureau International de Consultance Informatique) – Site web institutionnel pour le conseil en informatique",
+        "startDate": "2024",
+        "description": "Le site web de BICI a été développé pour renforcer la présence en ligne de l’entreprise et offrir une plateforme centralisée mettant en valeur ses services, son expertise et son portefeuille de clients. Conçu à la fois pour la communication institutionnelle et l'engagement des clients, le site présente une interface moderne et responsive, avec des sections dédiées aux informations sur l’entreprise, aux études de cas, aux offres de services et aux formulaires de contact. Il intègre également un panneau d’administration sécurisé pour la gestion du contenu, permettant à BICI de mettre à jour et de maintenir le site facilement. L’objectif était de refléter l’identité et le professionnalisme de l’entreprise tout en améliorant sa visibilité et son accessibilité auprès des clients et partenaires potentiels.",
+        "images": [
+          "images/portfolio/bici/bici-1.png",
+          "images/portfolio/bici/bici-2.png",
+          "images/portfolio/bici/logo.jpeg"
+        ],
+        "url": "https://bici.mg/a-propos.html",
+        "technologies": [
+          {
+            "class": "devicon-react-original",
+            "name": "React"
+          },
+          {
+            "class": "devicon-javascript-plain",
+            "name": "JavaScript"
+          },
+          {
+            "class": "devicon-html5-plain",
+            "name": "HTML"
+          },
+          {
+            "class": "devicon-css3-plain",
+            "name": "CSS"
+          },
+          {
+            "class": "devicon-bootstrap-plain",
+            "name": "Bootstrap"
+          },
+          {
+            "class": "devicon-nextjs-plain",
+            "name": "Next.js"
+          }
+        ]
+      },
+      {
+        "title": "Ketrika.ai – Assistant d'achat intelligent et moteur de recommandation pour Ketrika.com",
+        "startDate": "2023",
+        "description": "Ketrika.ai est un assistant conversationnel et un système de recommandation intelligent développé pour Ketrika.com afin d’améliorer l’engagement des utilisateurs et d’optimiser l’expérience d’achat. Intégré à Facebook Messenger, le chatbot aide les utilisateurs à découvrir des produits, poser des questions et recevoir une assistance personnalisée en temps réel, en utilisant le traitement du langage naturel pour comprendre les intentions des clients. Parallèlement, un moteur de recommandation sur mesure a été conçu pour analyser le comportement des utilisateurs, leurs préférences et les données produits, afin de générer des suggestions pertinentes sur le site web. Ensemble, ces composants visaient à accroître la satisfaction client, à améliorer les taux de conversion et à automatiser le support d’une plateforme e-commerce en pleine croissance, centrée sur les produits locaux malgaches.",
+        "images": [
+          "images/portfolio/ketrika/ketrika-ai.png"
+        ],
+        "url": "",
+        "technologies": [
+          {
+            "class": "devicon-python-plain",
+            "name": "Python"
+          },
+          {
+            "class": "devicon-postgresql-plain",
+            "name": "PostgreSQL"
+          },
+          {
+            "class": "devicon-angularjs-plain",
+            "name": "Angular"
+          },
+          {
+            "class": "devicon-django-plain",
+            "name": "Django"
+          },
+          {
+            "class": "devicon-mongodb-plain",
+            "name": "MongoDB"
+          },
+          {
+            "class": "devicon-go-plain",
+            "name": "Go"
+          },
+          {
+            "class": "devicon-googlecloud-plain",
+            "name": "GCP"
+          },
+          {
+            "class":"devicon-tensorflow-original",
+            "name":"TensorFlow"
+          }
+        ]
+      },
+      {
+        "title": "Gallois 2.0 – Système intégré de gestion des stocks, de la comptabilité et des ressources humaines",
+        "startDate": "2022",
+        "description": "Gallois 2.0 est un système d'information intégré développé pour une entreprise minière à Madagascar afin de numériser et rationaliser les processus opérationnels clés. La plateforme comprend trois modules principaux : la gestion des stocks, la comptabilité et les ressources humaines. Elle permet un suivi en temps réel des stocks, des rapports financiers automatisés, le traitement des salaires, la gestion des dossiers des employés et un contrôle d'accès basé sur les rôles. Adapté aux besoins spécifiques du secteur minier, le système améliore l'efficacité opérationnelle, garantit la conformité avec les normes comptables locales et soutient une meilleure planification de la main-d'œuvre et des ressources. Gallois 2.0 a considérablement réduit les tâches manuelles et a permis au client d'obtenir une visibilité complète sur ses opérations financières et logistiques.",
+        "images": [
+          "images/portfolio/gallois/logo.jpeg"
+        ],
+        "url": "",
+        "technologies": [
+          {
+            "class": "devicon-csharp-plain",
+            "name": "C#"
+          },
+          {
+            "class": "devicon-microsoftsqlserver-plain",
+            "name": "SQL Server"
+          },
+          {
+            "class": "devicon-dot-net-plain-wordmark",
+            "name": "ASP.NET"
+          },
+          {
+            "class": "devicon-html5-plain",
+            "name": "HTML"
+          },
+          {
+            "class": "devicon-bootstrap-plain",
+            "name": "Bootstrap"
+          },
+          {
+            "class": "devicon-css3-plain",
+            "name": "CSS"
+          }
+        ]
+      },
+      {
+        "title": "Ketrika.com – Plateforme de commerce électronique pour les produits artisanaux et locaux malgaches",
+        "startDate": "2022",
+        "description": "Ketrika.com est une plateforme de commerce électronique sur mesure développée pour promouvoir et vendre des produits artisanaux et locaux malgaches. Le site permet aux utilisateurs de parcourir les catégories de produits, de gérer leurs paniers, de passer des commandes et de suivre les livraisons via une interface intuitive et adaptée aux appareils mobiles. La plateforme comprend un tableau de bord d'administration pour la gestion des produits, des stocks, des données clients et du traitement des commandes. Elle a été conçue pour soutenir les artisans et les entreprises locales en leur offrant un marché numérique fiable, tout en offrant aux clients une expérience d'achat sécurisée et conviviale. Le système dispose également d'un moteur de recommandation de produits pour personnaliser le parcours utilisateur et augmenter les ventes.",
+        "images": [
+          "images/portfolio/ketrika/ketrika-1.png",
+          "images/portfolio/ketrika/ketrika-2.png"
+        ],
+        "url": "https://www.ketrika.com/home.jsp?but=pari/index",
+        "technologies": [
+          {
+            "class": "devicon-java-plain",
+            "name": "Java"
+          },
+          {
+            "class": "devicon-postgresql-plain",
+            "name": "PostgreSQL"
+          },
+          {
+            "class": "devicon-angularjs-plain",
+            "name": "Angular"
+          },
+          {
+            "class": "devicon-html5-plain",
+            "name": "HTML"
+          },
+          {
+            "class": "devicon-bootstrap-plain",
+            "name": "Bootstrap"
+          },
+          {
+            "class": "devicon-css3-plain",
+            "name": "CSS"
+          },
+          {
+            "class": "devicon-spring-plain",
+            "name": "Spring"
+          }
+        ]
+      },
+      {
+        "title": "VidyVarotra.mg – Plateforme de gestion des publicités en ligne pour une société de presse",
+        "startDate": "2021",
+        "description": "VidyVarotra.mg est un système de gestion des publicités en ligne basé sur le web, développé pour une société de presse malgache afin de numériser et rationaliser le processus de création, de soumission et de gestion des annonces classées et commerciales. La plateforme permet aux utilisateurs individuels et aux entreprises de soumettre des demandes de publicité, de choisir les options de publication (impression ou en ligne), de prévisualiser les mises en page et de suivre l'état de leurs soumissions. Elle inclut une interface interne pour les administrateurs afin de revoir, approuver, planifier et archiver les annonces, garantissant un flux de travail efficace et réduisant les tâches manuelles. En modernisant le processus de soumission des annonces, la plateforme a amélioré les délais de traitement, renforcé l'expérience client et augmenté la transparence opérationnelle.",
+        "images": [
+          "images/portfolio/vvsite/vv-1.png",
+          "images/portfolio/vvsite/vv-2.png"
+        ],
+        "url": "https://www.vidyvarotra.mg/index.jsp",
+        "technologies": [
+          {
+            "class": "devicon-java-plain",
+            "name": "Java"
+          },
+          {
+            "class": "devicon-postgresql-plain",
+            "name": "PostgreSQL"
+          },
+          {
+            "class": "devicon-angularjs-plain",
+            "name": "Angular"
+          },
+          {
+            "class": "devicon-html5-plain",
+            "name": "HTML"
+          },
+          {
+            "class": "devicon-bootstrap-plain",
+            "name": "Bootstrap"
+          },
+          {
+            "class": "devicon-css3-plain",
+            "name": "CSS"
+          },
+          {
+            "class": "devicon-spring-plain",
+            "name": "Spring"
+          },
+          {
+            "class":"devicon-go-plain",
+            "name":"Go"
+          }
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "company": "BICI",
+        "title": "Lead Software Engineer",
+        "years": "03.2022 - 12.2024",
+        "mainTech": [
+          "Java",
+          "Go",
+          "Oracle",
+          "C#",
+          "Python"
+        ],
+        "technologies": [
+          "MySQL",
+          "React",
+          "ASP.NET",
+          "Spring",
+          "Spring Boot",
+          ".NET Core",
+          ".NET Framework",
+          "Docker",
+          "Kubernetes",
+          "Oracle",
+          "PostgreSQL",
+          "MySQL",
+          "Django",
+          "Node.js",
+          "MongoDB",
+          "HTML/CSS",
+          "JS/TS",
+          "Bootstrap",
+          "C/C++",
+          "Google Cloud Platform"
+        ]
+      },
+      {
+        "company": "RAPP Indian Ocean(Contract with BICI)",
+        "title": "Software Development Engineer",
+        "years": "01.2022 - 12.2023",
+        "mainTech": [
+          "Laravel",
+          "VueJS"
+        ],
+        "technologies": [
+          "PHP",
+          "MySQL",
+          "HTML/CSS",
+          "Laravel Nova",
+          "Cloudflare",
+          "ElasticSearch"
+        ]
+      },
+      {
+        "company": "BICI",
+        "title": "Software Development Engineer",
+        "years": "12.2021 - 03.2022",
+        "mainTech": [
+          "Java",
+          "Go",
+          "Oracle",
+          "C#",
+          "Python"
+        ],
+        "technologies": [
+          "MySQL",
+          "Angular",
+          "ASP.NET",
+          "Spring",
+          "Spring Boot",
+          ".NET Core",
+          ".NET Framework",
+          "Docker",
+          "Kubernetes",
+          "Oracle",
+          "PostgreSQL",
+          "MySQL",
+          "Django",
+          "Node.js",
+          "MongoDB",
+          "HTML/CSS",
+          "JS/TS",
+          "Bootstrap",
+          "C/C++"
+        ]
+      },
+      {
+        "company": "PULSE",
+        "title": "Research and Development Engineer(Internship)",
+        "years": "07.2021 - 10.2021",
+        "mainTech": [
+          "Typescript",
+          "NodeJS",
+          "Google Dialogflow"
+        ],
+        "technologies": [
+          "Angular",
+          "MongoDB",
+          "HTML/CSS",
+          "Zammad",
+          "Docker",
+          "Active Directory",
+          "Microsoft Teams API"
+        ]
+      },
+      {
+        "company": "Farmshop Antsirabe",
+        "title": "Software Developer (Part-time)",
+        "years": "10.2019 - 06.2021",
+        "mainTech": [
+          "C/C++",
+          "Qt Design"
+        ],
+        "technologies": [
+          "SQLite",
+          "Go",
+          "PostgreSQL"
+        ]
+      }
+    ]
+  }
