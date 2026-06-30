@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lina Rabenandrasana — Software Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0D1B2A;
+    --navy-mid: #132233;
+    --navy-light: #1E3347;
+    --teal: #00C9B1;
+    --teal-dim: #00a593;
+    --sand: #C4B89A;
+    --slate: #5C7A8C;
+    --off-white: #F0EDE6;
+    --text-light: #A8BCC9;
+    --border-dim: rgba(255,255,255,0.07);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--off-white);
+    color: #1A1A1A;
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(13, 27, 42, 0.92);
+    backdrop-filter: blur(12px);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    border-bottom: 1px solid var(--border-dim);
+  }
+
+  .nav-logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--teal);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-light);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--teal); }
+
+  /* HERO */
+  .hero {
+    background: var(--navy);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 2rem 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(0,201,177,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--teal);
+    letter-spacing: 0.12em;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-eyebrow span { color: var(--slate); }
+
+  .hero-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 700;
+    color: var(--off-white);
+    line-height: 1.05;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-name .accent { color: var(--teal); }
+
+  .hero-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    font-weight: 300;
+    color: var(--sand);
+    margin-bottom: 2rem;
+    letter-spacing: 0.01em;
+  }
+
+  .terminal-bar {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--navy-light);
+    border: 1px solid var(--border-dim);
+    border-radius: 8px;
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .terminal-prompt {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--teal);
+  }
+
+  .terminal-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--off-white);
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    background: var(--teal);
+    animation: blink 1s step-end infinite;
+    vertical-align: text-bottom;
+  }
+
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary {
+    background: var(--teal);
+    color: var(--navy);
+  }
+  .btn-primary:hover { background: var(--teal-dim); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--off-white);
+    border: 1px solid rgba(240,237,230,0.25);
+  }
+  .btn-outline:hover {
+    border-color: var(--teal);
+    color: var(--teal);
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .scroll-hint span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--slate);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--teal), transparent);
+    animation: drop 1.6s ease-in-out infinite;
+  }
+
+  @keyframes drop {
+    0% { transform: scaleY(0); transform-origin: top; opacity: 0; }
+    40% { transform: scaleY(1); opacity: 1; }
+    100% { transform: scaleY(1); opacity: 0; transform-origin: bottom; }
+  }
+
+  /* SECTIONS */
+  section { padding: 90px 2rem; }
+
+  .section-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--teal);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-heading {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  /* ABOUT */
+  .about { background: var(--off-white); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    color: #3a3a3a;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+  }
+
+  .about-text p:last-child { margin-bottom: 0; }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    background: var(--navy);
+    border-radius: 10px;
+    padding: 1.4rem;
+  }
+
+  .stat-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--teal);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-weight: 400;
+  }
+
+  /* SKILLS */
+  .skills { background: #E8E4DC; }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-group {
+    background: white;
+    border-radius: 10px;
+    padding: 1.4rem;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .skill-group-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--teal-dim);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .skill-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    background: #F0EDE6;
+    color: #2a4050;
+    padding: 0.3rem 0.65rem;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.07);
+  }
+
+  /* EXPERIENCE */
+  .experience { background: var(--off-white); }
+
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--teal), transparent);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .timeline-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: -2.35rem;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--teal);
+    border: 2px solid var(--off-white);
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .job-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .job-period {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--slate);
+    white-space: nowrap;
+    padding-top: 3px;
+  }
+
+  .job-company {
+    font-size: 0.88rem;
+    color: var(--teal-dim);
+    font-weight: 500;
+    margin-bottom: 0.9rem;
+  }
+
+  .job-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+
+  .job-bullets li {
+    font-size: 0.92rem;
+    color: #3a3a3a;
+    line-height: 1.65;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+
+  .job-bullets li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-size: 0.8rem;
+    top: 2px;
+  }
+
+  .job-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1rem;
+  }
+
+  .job-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    background: rgba(0,201,177,0.1);
+    color: var(--teal-dim);
+    padding: 0.2rem 0.55rem;
+    border-radius: 3px;
+    border: 1px solid rgba(0,201,177,0.2);
+  }
+
+  /* PROJECTS */
+  .projects { background: var(--navy); }
+
+  .projects .section-heading { color: var(--off-white); }
+  .projects .section-label { color: var(--teal); }
+
+  .project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: var(--navy-light);
+    border: 1px solid var(--border-dim);
+    border-radius: 12px;
+    padding: 1.6rem;
+    transition: border-color 0.2s, transform 0.2s;
+    text-decoration: none;
+    display: block;
+  }
+
+  .project-card:hover {
+    border-color: rgba(0,201,177,0.3);
+    transform: translateY(-3px);
+  }
+
+  .project-icon {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .project-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--off-white);
+    margin-bottom: 0.5rem;
+  }
+
+  .project-desc {
+    font-size: 0.87rem;
+    color: var(--text-light);
+    line-height: 1.65;
+    margin-bottom: 1.2rem;
+  }
+
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .project-tech span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--teal);
+    background: rgba(0,201,177,0.08);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    border: 1px solid rgba(0,201,177,0.15);
+  }
+
+  /* EDUCATION & CERTS */
+  .education { background: #E8E4DC; }
+
+  .edu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .edu-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .edu-degree {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+    line-height: 1.3;
+  }
+
+  .edu-school {
+    font-size: 0.85rem;
+    color: var(--teal-dim);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .edu-detail {
+    font-size: 0.82rem;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .cert-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 1.2rem;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.06);
+    margin-top: 1rem;
+  }
+
+  .cert-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--teal);
+    flex-shrink: 0;
+  }
+
+  .cert-name {
+    font-size: 0.88rem;
+    color: var(--navy);
+    font-weight: 500;
+    flex: 1;
+  }
+
+  .cert-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--slate);
+  }
+
+  /* CONTACT */
+  .contact { background: var(--navy); }
+
+  .contact .section-heading { color: var(--off-white); }
+  .contact .section-label { color: var(--teal); }
+
+  .contact-body {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    margin-bottom: 2.5rem;
+    max-width: 520px;
+    line-height: 1.7;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--off-white);
+    text-decoration: none;
+    background: var(--navy-light);
+    border: 1px solid var(--border-dim);
+    padding: 0.7rem 1.2rem;
+    border-radius: 6px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .contact-link:hover {
+    border-color: var(--teal);
+    color: var(--teal);
+  }
+
+  .contact-icon {
+    font-size: 1rem;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #060f18;
+    padding: 1.5rem 2rem;
+    text-align: center;
+  }
+
+  footer p {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--slate);
+    letter-spacing: 0.06em;
+  }
+
+  footer span { color: var(--teal); }
+
+  /* RESPONSIVE */
+  @media (max-width: 680px) {
+    nav { padding: 0 1rem; }
+    .nav-links { gap: 1rem; }
+    .hero { padding: 100px 1.2rem 80px; }
+    section { padding: 70px 1.2rem; }
+    .about-grid { grid-template-columns: 1fr; }
+    .edu-grid { grid-template-columns: 1fr; }
+    .stat-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">LR</span>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span>// </span>software engineer &middot; bilingual EN/FR &middot; Toronto, ON
+    </div>
+    <h1 class="hero-name">
+      Lina<br><span class="accent">Rabenandrasana</span>
+    </h1>
+    <p class="hero-title">Full-Stack Engineer &nbsp;&middot;&nbsp; Team Lead &nbsp;&middot;&nbsp; Systems Architect</p>
+    <div class="terminal-bar">
+      <span class="terminal-prompt">$</span>
+      <span class="terminal-text" id="typed-text"></span>
+      <span class="cursor"></span>
+    </div>
+    <div class="hero-cta">
+      <a href="#experience" class="btn btn-primary">View my work</a>
+      <a href="#contact" class="btn btn-outline">Get in touch</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="section-label">// 01 — About</div>
+    <h2 class="section-heading">Building software<br>that does real work</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a bilingual (English/French) software engineer with a Master's degree in Computer Science and 5+ years of hands-on experience across the full software development lifecycle — from gathering client requirements to shipping production systems.</p>
+        <p>My background spans enterprise platforms, microservices architecture, team leadership, and DevOps automation. I've led teams of up to 12 developers, managed parallel project delivery, and built systems from the ground up for industries ranging from restaurants and hospitals to e-commerce and universities.</p>
+        <p>I thrive in environments where technical depth meets cross-functional collaboration. I move fluidly between writing code, mentoring junior developers, and working directly with stakeholders to turn complex requirements into working software.</p>
+      </div>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">Years of professional software engineering</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">12</div>
+          <div class="stat-label">Developers led across Agile & Waterfall teams</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">90%</div>
+          <div class="stat-label">Process efficiency gain delivered to enterprise clients</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">2</div>
+          <div class="stat-label">Languages: French & English, fluent</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills" id="skills">
+  <div class="section-inner">
+    <div class="section-label">// 02 — Skills</div>
+    <h2 class="section-heading">Technical toolkit</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-title">Languages</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Shell</span>
+          <span class="skill-tag">C++</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Frameworks</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Spring Boot</span>
+          <span class="skill-tag">Angular</span>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Express.js</span>
+          <span class="skill-tag">Hibernate</span>
+          <span class="skill-tag">JSP</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Databases</div>
+        <div class="skill-tags">
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">Oracle DB</span>
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">Cassandra</span>
+          <span class="skill-tag">SQLite</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">DevOps & Cloud</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">GCP</span>
+          <span class="skill-tag">Azure DevOps</span>
+          <span class="skill-tag">GitHub Actions</span>
+          <span class="skill-tag">Jenkins</span>
+          <span class="skill-tag">CI/CD</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Methodologies</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Agile / Scrum</span>
+          <span class="skill-tag">Kanban</span>
+          <span class="skill-tag">Waterfall</span>
+          <span class="skill-tag">SOLID</span>
+          <span class="skill-tag">OOP</span>
+          <span class="skill-tag">TDD</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Strengths</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Team Leadership</span>
+          <span class="skill-tag">Requirements Analysis</span>
+          <span class="skill-tag">Incident Management</span>
+          <span class="skill-tag">Mentorship</span>
+          <span class="skill-tag">Bilingual EN/FR</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+  <div class="section-inner">
+    <div class="section-label">// 03 — Experience</div>
+    <h2 class="section-heading">Where I've worked</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="job-header">
+          <div class="job-title">Bilingual Client Services Representative</div>
+          <div class="job-period">Mar 2026 – Present</div>
+        </div>
+        <div class="job-company">National Bank Equipment Financing (Subsidiary of National Bank of Canada) — Toronto, ON</div>
+        <ul class="job-bullets">
+          <li>Managing client accounts, commercial requests and financial inquiries within the Equipment Financing division, ensuring compliance with banking regulations and internal procedures.</li>
+          <li>Navigating complex internal banking systems and cross-functional corporate structures, demonstrating strong organizational agility in a regulated enterprise environment.</li>
+          <li>Leveraging fluent bilingualism (French/English) to collaborate across all Canadian regions, supporting the bank's internal mobility and client experience commitments.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="job-header">
+          <div class="job-title">Software Engineer & Team Lead</div>
+          <div class="job-period">Dec 2021 – Dec 2024</div>
+        </div>
+        <div class="job-company">BICI — Antananarivo, Madagascar</div>
+        <ul class="job-bullets">
+          <li>Led end-to-end design, development, and optimization of two enterprise platforms (ad-management and e-commerce), overseeing a 6-member cross-functional team while acting as both lead developer and business analyst. Delivered a 20% improvement in enterprise workflow efficiency.</li>
+          <li>Drove full SDLC delivery across sectors including restaurants, universities, hospitals, and retail — transitioning clients from paper-based processes to automated systems, improving operational efficiency by over 90%.</li>
+          <li>Architected microservices, built RESTful APIs, and delivered high-performance features using Java, Angular, and PostgreSQL across parallel client projects.</li>
+          <li>Led a team of 12 junior developers in Agile and Waterfall environments — planning sprints, mentoring on testing and code review best practices, and implementing CI/CD pipelines with GitHub Actions, Jenkins, and Docker. Reduced code review time by 30%.</li>
+          <li>Managed end-to-end production support and incident resolution; spearheaded root-cause analysis to ensure continuous platform stability.</li>
+        </ul>
+        <div class="job-tags">
+          <span class="job-tag">Java</span>
+          <span class="job-tag">Spring Framework</span>
+          <span class="job-tag">Angular</span>
+          <span class="job-tag">PostgreSQL</span>
+          <span class="job-tag">Oracle DB</span>
+          <span class="job-tag">Python</span>
+          <span class="job-tag">Docker</span>
+          <span class="job-tag">GCP</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="job-header">
+          <div class="job-title">R&D Software Engineering Intern</div>
+          <div class="job-period">Jul – Oct 2021</div>
+        </div>
+        <div class="job-company">PULSE — Antananarivo, Madagascar</div>
+        <ul class="job-bullets">
+          <li>Automated 40% of recurring maintenance tasks by developing an intelligent chatbot integrated with Skype and Microsoft Teams.</li>
+          <li>Designed user-centric features including contextual ticket creation and smart replies; implemented unit tests to ensure reliability.</li>
+          <li>Participated in Agile ceremonies (sprint planning, reviews) and contributed to feature prioritization and technical documentation.</li>
+        </ul>
+        <div class="job-tags">
+          <span class="job-tag">Node.js</span>
+          <span class="job-tag">TypeScript</span>
+          <span class="job-tag">MongoDB</span>
+          <span class="job-tag">Google Cloud</span>
+          <span class="job-tag">Jasmine</span>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="job-header">
+          <div class="job-title">Software Developer</div>
+          <div class="job-period">Oct 2019 – Jun 2021</div>
+        </div>
+        <div class="job-company">Farmshop Antsirabe — Madagascar (Part-time)</div>
+        <ul class="job-bullets">
+          <li>Collected and analyzed requirements directly from non-technical stakeholders and designed a custom information system to manage stock, sales, and cash operations across multiple store locations.</li>
+          <li>Built a lightweight embedded client in C++/Qt (optimized for low-resource environments) and a Java backend to synchronize data across all store instances.</li>
+          <li>Implemented basic analytics for inventory and sales trends using feature engineering techniques.</li>
+        </ul>
+        <div class="job-tags">
+          <span class="job-tag">Java</span>
+          <span class="job-tag">C++</span>
+          <span class="job-tag">Qt</span>
+          <span class="job-tag">SQLite</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="section-inner">
+    <div class="section-label">// 04 — Projects</div>
+    <h2 class="section-heading">Things I've built</h2>
+    <div class="project-cards">
+
+      <a href="https://github.com/linamandresy/ekaly-lina" class="project-card" target="_blank" rel="noopener">
+        <span class="project-icon">🍽️</span>
+        <div class="project-name">Ekaly</div>
+        <p class="project-desc">A full-stack web platform for restaurant and food delivery management. Features role-based dashboards for customers and admins, real-time order management, and a responsive Angular UI.</p>
+        <div class="project-tech">
+          <span>MongoDB</span>
+          <span>Express.js</span>
+          <span>Angular</span>
+          <span>Node.js</span>
+          <span>Heroku</span>
+        </div>
+      </a>
+
+      <div class="project-card">
+        <span class="project-icon">🛒</span>
+        <div class="project-name">Ketrika.com</div>
+        <p class="project-desc">Led architecture and development of a high-traffic e-commerce platform for ONET Group International, serving users across Madagascar. Built with microservices and RESTful APIs for scalability.</p>
+        <div class="project-tech">
+          <span>Java</span>
+          <span>Spring Boot</span>
+          <span>PostgreSQL</span>
+          <span>Angular</span>
+          <span>GCP</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <span class="project-icon">📢</span>
+        <div class="project-name">Vidyvarotra.mg</div>
+        <p class="project-desc">Ad-management platform for ONET Group International. Designed and optimized full end-to-end, delivering a measurable improvement in enterprise workflow management.</p>
+        <div class="project-tech">
+          <span>Java</span>
+          <span>JSP</span>
+          <span>PostgreSQL</span>
+          <span>Docker</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <span class="project-icon">🤖</span>
+        <div class="project-name">Maintenance Chatbot</div>
+        <p class="project-desc">Intelligent chatbot that automated 40% of recurring IT maintenance tasks. Integrated with Microsoft Teams and Skype, featuring smart replies and contextual ticket creation.</p>
+        <div class="project-tech">
+          <span>Node.js</span>
+          <span>TypeScript</span>
+          <span>MongoDB</span>
+          <span>Google Cloud</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="education" id="education">
+  <div class="section-inner">
+    <div class="section-label">// 05 — Education & Certifications</div>
+    <h2 class="section-heading">Credentials</h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-degree">MSc in Computer Science & Engineering</div>
+        <div class="edu-school">Université Côte d'Azur — Nice Sophia Antipolis, France</div>
+        <div class="edu-detail">Specialization in Mobility, Databases (Relational & Big Data), and Systems Integration</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-degree">BSc in Information Technology</div>
+        <div class="edu-school">IT University — Madagascar</div>
+        <div class="edu-detail">Specialization in Software Development</div>
+      </div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-dot"></div>
+      <div class="cert-name">Information Technology Professional (ITP) — ICTC Canada</div>
+      <div class="cert-date">Mar 2025</div>
+    </div>
+    <div class="cert-row">
+      <div class="cert-dot"></div>
+      <div class="cert-name">Generative AI Explorer — Vertex AI (Google)</div>
+      <div class="cert-date">Jan 2025</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="section-label">// 06 — Contact</div>
+    <h2 class="section-heading">Let's build something</h2>
+    <p class="contact-body">I'm open to new opportunities in software engineering, full-stack development, or technical leadership roles. Feel free to reach out — in English or French.</p>
+    <div class="contact-links">
+      <a href="mailto:mandresyrab@gmail.com" class="contact-link">
+        <span class="contact-icon">✉</span>
+        mandresyrab@gmail.com
+      </a>
+      <a href="tel:4167329879" class="contact-link">
+        <span class="contact-icon">📞</span>
+        416-732-9879
+      </a>
+      <a href="https://linkedin.com/in/lina-mandresy" class="contact-link" target="_blank" rel="noopener">
+        <span class="contact-icon">🔗</span>
+        LinkedIn
+      </a>
+      <a href="https://github.com/linamandresy" class="contact-link" target="_blank" rel="noopener">
+        <span class="contact-icon">⌨</span>
+        GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Designed & built by <span>Lina Rabenandrasana</span> &nbsp;·&nbsp; Toronto, ON</p>
+</footer>
+
+<script>
+  const phrases = [
+    'tech stack: Java · Spring · Angular · PostgreSQL',
+    'led teams of up to 12 developers',
+    'fluent in English & French',
+    'shipped microservices to GCP & Azure',
+    'open to new opportunities in Toronto'
+  ];
+
+  let phraseIdx = 0, charIdx = 0, deleting = false;
+  const el = document.getElementById('typed-text');
+
+  function type() {
+    const current = phrases[phraseIdx];
+    if (!deleting) {
+      el.textContent = current.slice(0, charIdx + 1);
+      charIdx++;
+      if (charIdx === current.length) {
+        deleting = true;
+        setTimeout(type, 1800);
+        return;
+      }
+    } else {
+      el.textContent = current.slice(0, charIdx - 1);
+      charIdx--;
+      if (charIdx === 0) {
+        deleting = false;
+        phraseIdx = (phraseIdx + 1) % phrases.length;
+      }
+    }
+    setTimeout(type, deleting ? 28 : 52);
+  }
+  type();
+</script>
+</body>
+</html>
