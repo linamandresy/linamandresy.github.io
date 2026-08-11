@@ -146,6 +146,16 @@
   .btn-primary:hover { background: var(--teal-dim); box-shadow: 0 6px 28px var(--teal-glow); }
   .btn-outline { background: transparent; color: var(--off-white); border: 1px solid rgba(255,255,255,0.22); }
   .btn-outline:hover { border-color: var(--teal); color: var(--teal); background: rgba(225, 29, 36, 0.06); }
+  .btn-resume {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--off-white);
+    border: 1px solid rgba(225, 29, 36, 0.45);
+  }
+  .btn-resume:hover {
+    background: rgba(225, 29, 36, 0.12);
+    border-color: var(--teal);
+    color: var(--teal);
+  }
   .scroll-hint {
     position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
     display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
@@ -368,6 +378,13 @@
     border-color: var(--teal); color: var(--teal);
     background: rgba(225, 29, 36, 0.06);
   }
+  .contact-link--resume {
+    border-color: rgba(225, 29, 36, 0.35);
+    background: rgba(225, 29, 36, 0.08);
+  }
+  .contact-link--resume:hover {
+    background: rgba(225, 29, 36, 0.14);
+  }
   .contact-icon { font-size: 1rem; }
 
   footer {
@@ -398,6 +415,7 @@
       <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
       <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
       <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+      <li><a href="assets/Lina_Resume_General.pdf" target="_blank" rel="noopener" data-i18n="nav.resume">Resume</a></li>
       <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
     </ul>
   </div>
@@ -424,6 +442,7 @@
     </div>
     <div class="hero-cta">
       <a href="#experience" class="btn btn-primary" data-i18n="hero.cta1">View my work</a>
+      <a href="assets/Lina_Resume_General.pdf" class="btn btn-resume" download="Lina_Mandresy_Rabenandrasana_Resume.pdf" target="_blank" rel="noopener" data-i18n="hero.cta3">Download resume</a>
       <a href="#contact" class="btn btn-outline" data-i18n="hero.cta2">Get in touch</a>
     </div>
   </div>
@@ -727,6 +746,9 @@
     <h2 class="section-heading" data-i18n="contact.heading">Let's build something</h2>
     <p class="contact-body" data-i18n="contact.body">I'm open to new opportunities in software engineering, full-stack development, or technical leadership roles. Feel free to reach out — in English or French.</p>
     <div class="contact-links">
+      <a href="assets/Lina_Resume_General.pdf" class="contact-link contact-link--resume" download="Lina_Mandresy_Rabenandrasana_Resume.pdf" target="_blank" rel="noopener">
+        <span class="contact-icon">📄</span><span data-i18n="contact.resume">Download resume (PDF)</span>
+      </a>
       <a href="mailto:mandresyrab@gmail.com" class="contact-link">
         <span class="contact-icon">✉</span>mandresyrab@gmail.com
       </a>
@@ -754,12 +776,14 @@ const translations = {
     "nav.skills": "Skills",
     "nav.experience": "Experience",
     "nav.projects": "Projects",
+    "nav.resume": "Resume",
     "nav.contact": "Contact",
 
     "hero.eyebrow": "software engineer · bilingual EN/FR · Toronto, ON",
     "hero.title": "Full-Stack Engineer &nbsp;·&nbsp; Product Builder &nbsp;·&nbsp; SaaS &amp; AI",
     "hero.cta1": "View my work",
     "hero.cta2": "Get in touch",
+    "hero.cta3": "Download resume",
     "hero.scroll": "Scroll",
 
     "about.label": "// 01 — About",
@@ -840,6 +864,7 @@ const translations = {
     "contact.label": "// 06 — Contact",
     "contact.heading": "Let's build something",
     "contact.body": "I'm open to new opportunities in software engineering, full-stack development, or technical leadership roles. Feel free to reach out — in English or French.",
+    "contact.resume": "Download resume (PDF)",
 
     "footer.text": "Designed &amp; built by <span>Lina Mandresy Rabenandrasana</span> &nbsp;·&nbsp; Toronto, ON"
   },
@@ -849,12 +874,14 @@ const translations = {
     "nav.skills": "Compétences",
     "nav.experience": "Expérience",
     "nav.projects": "Projets",
+    "nav.resume": "CV",
     "nav.contact": "Contact",
 
     "hero.eyebrow": "ingénieur logiciel · bilingue FR/EN · Toronto, ON",
     "hero.title": "Développeur Full-Stack &nbsp;·&nbsp; Créateur de produits &nbsp;·&nbsp; SaaS &amp; IA",
     "hero.cta1": "Voir mon travail",
     "hero.cta2": "Me contacter",
+    "hero.cta3": "Télécharger le CV",
     "hero.scroll": "Défiler",
 
     "about.label": "// 01 — À propos",
@@ -935,6 +962,7 @@ const translations = {
     "contact.label": "// 06 — Contact",
     "contact.heading": "Construisons quelque chose ensemble",
     "contact.body": "Je suis ouvert à de nouvelles opportunités en ingénierie logicielle, développement full-stack ou leadership technique. N'hésitez pas à me contacter — en français ou en anglais.",
+    "contact.resume": "Télécharger le CV (PDF)",
 
     "footer.text": "Conçu &amp; développé par <span>Lina Mandresy Rabenandrasana</span> &nbsp;·&nbsp; Toronto, ON"
   }
