@@ -1034,6 +1034,8 @@ const translations = {
     "contact.success": "Thanks — your message was sent. I'll get back to you soon.",
     "contact.error": "Something went wrong. Please try again or email me directly.",
     "contact.validation": "Please fill in your name, email, and message.",
+    "contact.emailInvalid": "Please enter a valid email address.",
+    "contact.timeout": "The request timed out. Please try again or email me directly.",
 
     "footer.text": "Designed &amp; built by <span>Lina Mandresy Rabenandrasana</span> &nbsp;·&nbsp; Toronto, ON"
   },
@@ -1147,6 +1149,8 @@ const translations = {
     "contact.success": "Merci — votre message a bien été envoyé. Je vous répondrai bientôt.",
     "contact.error": "Une erreur s'est produite. Réessayez ou écrivez-moi directement.",
     "contact.validation": "Veuillez renseigner votre nom, courriel et message.",
+    "contact.emailInvalid": "Veuillez entrer une adresse courriel valide.",
+    "contact.timeout": "La requête a expiré. Réessayez ou écrivez-moi directement.",
 
     "footer.text": "Conçu &amp; développé par <span>Lina Mandresy Rabenandrasana</span> &nbsp;·&nbsp; Toronto, ON"
   }
@@ -1229,8 +1233,9 @@ function setLang(lang) {
   const statusEl = document.getElementById('contact-status');
   if (statusEl && statusEl.classList.contains('is-visible')) {
     const kind = statusEl.dataset.kind;
-    if (kind === 'success' || kind === 'error' || kind === 'validation') {
-      statusEl.textContent = translations[lang][`contact.${kind}`];
+    const key = kind ? `contact.${kind}` : null;
+    if (key && translations[lang][key] !== undefined) {
+      statusEl.textContent = translations[lang][key];
     }
   }
   const submitBtn = document.getElementById('contact-submit');
@@ -1242,6 +1247,8 @@ function setLang(lang) {
 const contactForm = document.getElementById('contact-form');
 const contactStatus = document.getElementById('contact-status');
 const contactSubmit = document.getElementById('contact-submit');
+const CONTACT_SUBMIT_TIMEOUT_MS = 15000;
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function showFormStatus(kind, message) {
   contactStatus.textContent = message;
@@ -1249,24 +1256,33 @@ function showFormStatus(kind, message) {
   contactStatus.className = 'form-status is-visible ' + (kind === 'success' ? 'is-success' : 'is-error');
 }
 
+function isValidEmail(value) {
+  return EMAIL_PATTERN.test(value);
+}
+
 contactForm.addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  const t = translations[currentLang];
   const fields = contactForm.elements;
   const name = fields.namedItem('name').value.trim();
   const email = fields.namedItem('email').value.trim();
   const message = fields.namedItem('message').value.trim();
   const customSubject = fields.namedItem('form_subject').value.trim();
+  const t = () => translations[currentLang];
 
   if (!name || !email || !message) {
-    showFormStatus('validation', t['contact.validation']);
+    showFormStatus('validation', t()['contact.validation']);
+    return;
+  }
+
+  if (!isValidEmail(email)) {
+    showFormStatus('emailInvalid', t()['contact.emailInvalid']);
     return;
   }
 
   contactSubmit.disabled = true;
   contactSubmit.dataset.sending = '1';
-  contactSubmit.textContent = t['contact.sending'];
+  contactSubmit.textContent = t()['contact.sending'];
   contactStatus.className = 'form-status';
   contactStatus.textContent = '';
   delete contactStatus.dataset.kind;
@@ -1282,25 +1298,33 @@ contactForm.addEventListener('submit', async (event) => {
     formData.append('botcheck', 'true');
   }
 
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), CONTACT_SUBMIT_TIMEOUT_MS);
+
   try {
     const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      body: formData
+      body: formData,
+      signal: controller.signal
     });
     const result = await response.json().catch(() => ({}));
 
     if (response.ok && result.success) {
-      showFormStatus('success', t['contact.success']);
+      showFormStatus('success', t()['contact.success']);
       contactForm.reset();
     } else {
-      showFormStatus('error', result.message || t['contact.error']);
+      console.error('Web3Forms submission failed', { status: response.status, result });
+      showFormStatus('error', t()['contact.error']);
     }
   } catch (err) {
-    showFormStatus('error', t['contact.error']);
+    console.error('Web3Forms submission error', err);
+    const timedOut = err && err.name === 'AbortError';
+    showFormStatus(timedOut ? 'timeout' : 'error', timedOut ? t()['contact.timeout'] : t()['contact.error']);
   } finally {
+    clearTimeout(timeoutId);
     contactSubmit.disabled = false;
     delete contactSubmit.dataset.sending;
-    contactSubmit.textContent = t['contact.submit'];
+    contactSubmit.textContent = t()['contact.submit'];
   }
 });
 </script>
