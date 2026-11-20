@@ -312,17 +312,6 @@
     transform: translateY(-3px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(225, 29, 36, 0.1);
   }
-  .project-card--featured {
-    border-color: rgba(225, 29, 36, 0.35);
-    background: linear-gradient(145deg, #1A1A1A 0%, #141414 100%);
-  }
-  .project-badge {
-    display: inline-block; font-family: 'JetBrains Mono', monospace;
-    font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
-    color: #fff; background: var(--teal);
-    border: 1px solid rgba(225, 29, 36, 0.5); padding: 0.2rem 0.6rem;
-    border-radius: 3px; margin-bottom: 0.8rem;
-  }
   .project-icon { font-size: 1.6rem; margin-bottom: 1rem; display: block; }
   .project-name { font-family: 'Space Grotesk', sans-serif; font-size: 1.05rem; font-weight: 600; color: var(--off-white); margin-bottom: 0.5rem; }
   .project-desc { font-size: 0.87rem; color: var(--text-light); line-height: 1.65; margin-bottom: 1.2rem; }
@@ -768,19 +757,6 @@
     <div class="section-label" data-i18n="proj.label">// 04 — Projects</div>
     <h2 class="section-heading" data-i18n="proj.heading">Things I've built</h2>
 
-    <div class="project-subsection-label" data-i18n="proj.current">Currently building</div>
-    <div class="project-cards" style="margin-bottom:3rem;">
-      <a href="https://github.com/linamandresy/power-pulse-gym-app" class="project-card project-card--featured" target="_blank" rel="noopener">
-        <div class="project-badge" data-i18n="proj.inprogress">In progress</div>
-        <span class="project-icon">🏋️</span>
-        <div class="project-name">Power Pulse Gym</div>
-        <p class="project-desc" data-i18n="proj.p1.desc">A complete digital ecosystem for fitness businesses — synchronized desktop and tablet experience covering member management, subscriptions, attendance tracking, coach workflows, business reporting, and real-time LAN synchronization.</p>
-        <div class="project-tech">
-          <span>Electron</span><span>Next.js</span><span>TypeScript</span><span>SQLite</span>
-        </div>
-      </a>
-    </div>
-
     <div class="project-subsection-label" data-i18n="proj.products">Products</div>
     <div class="project-cards">
 
@@ -994,10 +970,7 @@ const translations = {
 
     "proj.label": "// 04 — Projects",
     "proj.heading": "Things I've built",
-    "proj.current": "Currently building",
-    "proj.inprogress": "In progress",
     "proj.products": "Products",
-    "proj.p1.desc": "A complete digital ecosystem for fitness businesses — synchronized desktop and tablet experience covering member management, subscriptions, attendance tracking, coach workflows, business reporting, and real-time LAN synchronization.",
     "proj.p2.desc": "A mentorship platform connecting mentors and mentees through professional matching, collaboration tools, and progress tracking — making mentorship more accessible and structured.",
     "proj.p3.desc": "An automotive marketplace connecting customers in Madagascar with suppliers in Canada. Designed to simplify cross-border commerce and streamline export logistics for automotive parts.",
     "proj.p4.desc": "Enterprise e-commerce platform built for scalability, with product and customer management, inventory integration, REST APIs, and an AI-powered recommendation engine for personalized shopping.",
@@ -1109,10 +1082,7 @@ const translations = {
 
     "proj.label": "// 04 — Projets",
     "proj.heading": "Ce que j'ai créé",
-    "proj.current": "En cours de développement",
-    "proj.inprogress": "En cours",
     "proj.products": "Produits",
-    "proj.p1.desc": "Un écosystème numérique complet pour les entreprises de fitness — expérience synchronisée bureau et tablette couvrant la gestion des membres, des abonnements, des présences, des workflows des coachs, des rapports et la synchronisation LAN en temps réel.",
     "proj.p2.desc": "Une plateforme de mentorat connectant mentors et mentorés via un matching professionnel, des outils de collaboration et un suivi de la progression — rendant le mentorat plus accessible et structuré.",
     "proj.p3.desc": "Une marketplace automobile connectant les clients à Madagascar avec les fournisseurs au Canada. Conçue pour simplifier le commerce transfrontalier et optimiser la logistique d'exportation de pièces automobiles.",
     "proj.p4.desc": "Plateforme e-commerce d'entreprise conçue pour la scalabilité, avec gestion des produits et clients, intégration des stocks, APIs REST et moteur de recommandations alimenté par l'IA pour une expérience d'achat personnalisée.",
@@ -1161,14 +1131,12 @@ let currentLang = 'en';
 const typingPhrases = {
   en: [
     'building SaaS · enterprise · AI-powered products',
-    'currently building: Power Pulse Gym App',
     'led teams of up to 12 developers',
     'fluent in English & French',
     'open to new opportunities in Toronto'
   ],
   fr: [
     'création de SaaS · logiciels d\'entreprise · IA',
-    'en cours : Power Pulse Gym App',
     'pilotage d\'équipes jusqu\'à 12 développeurs',
     'bilingue français & anglais',
     'ouverte à de nouvelles opportunités à Toronto'
